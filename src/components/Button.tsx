@@ -3,7 +3,7 @@ const styles = {
   secondary: "bg-white text-neutral-900 border-neutral-200 hover:bg-neutral-50",
 };
 
-const Button = ({ style, disabled, onClick, children }) => {
+const Button = ({ style, disabled, onClick, children } : {style: string, children:string}) => {
   return (
     <button
       disabled={disabled}
