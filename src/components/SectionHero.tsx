@@ -1,11 +1,11 @@
-import HeroImg from "./assets/Hero image.svg"
+import HeroImg from "../assets/Hero image.svg"
 import Button from "./Button";
 
 const SectionHero = () => {
   return (
     <section
       id="hero"
-      className="bg-white w-full min-h-screen flex flex-col xl:flex-row py-12 px-3 gap-12 xl:p-24 xl:gap-8 items-center mt-4 shadow-lg"
+      className="flex flex-col xl:flex-row gap-12  xl:gap-8 items-center "
     >
       <div className="flex flex-col gap-8 lg:gap-16 w-full max-w-1xl">
         <div className="flex flex-col gap-4 lg:gap-6">
