@@ -1,4 +1,10 @@
-const BurgerIcon = ({className, onClick} : {className:string}) => {
+interface BurgerIconProps{
+  className: string;
+  onClick: () => void;
+}
+
+
+const BurgerIcon = ({className, onClick} : BurgerIconProps) => {
   return (
     <svg
       width="20"

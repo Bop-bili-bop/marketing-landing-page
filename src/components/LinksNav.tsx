@@ -1,6 +1,10 @@
 import Links from "../utils/links";
 
-const LinksNav = ({ className }: { className: string }) => {
+interface LinksNavProps{
+  className:string;
+}
+
+const LinksNav = ({ className }: LinksNavProps) => {
   return (
     <ul id="links" className={`flex font-medium text-neutral-700 ${className}`}>
       {Links.map((link) => (

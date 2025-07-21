@@ -22,8 +22,8 @@ const NavBar = () => {
         <LinksNav className="flex-row gap-8"/>
       </div>
       <div className="hidden lg:flex flex-row gap-4">
-        <Button style="secondary">Learn More</Button>
-        <Button style="primary">See pricing</Button>
+        <Button variant="secondary">Learn More</Button>
+        <Button variant="primary">See pricing</Button>
       </div>
     </div>
   );

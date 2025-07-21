@@ -1,7 +1,11 @@
 import LinksNav from "./LinksNav";
 import Logo from "../assets/Logo.svg";
 
-const BurgerMenu = ({ isOpen }: { isOpen: boolean }) => {
+interface BurgerMenuProps{
+  isOpen: boolean;
+}
+
+const BurgerMenu = ({ isOpen }: BurgerMenuProps) => {
   return (
     <div
       className={`lg:hidden bg-white fixed w-60 h-full inset-0 left-0 top-0 transform transition-transform duration-300 ease-in-out ${
