@@ -1,5 +1,5 @@
 import Marquee from "react-fast-marquee";
-import { LOGOS } from "../utils/importLogos";
+import { LOGOS } from "../utils/importBrandLogos";
 
 const Carousel = ({ className, ...marqueeProps }) => {
   return (
