@@ -1,14 +1,16 @@
+interface FeatureProps {
+  vertical: boolean;
+  featureHeader: string;
+  featureDescription: string;
+  icon: string;
+}
+
 const Feature = ({
   vertical = true,
   featureHeader,
   featureDescription,
   icon,
-}: {
-  vertical: boolean;
-  featureHeader: string;
-  featureDescription: string;
-  icon: string;
-}) => {
+}: FeatureProps) => {
   return (
     <div
       className={`flex  gap-5 ${
@@ -18,7 +20,9 @@ const Feature = ({
       <div className="w-12 h-12 bg-white shadow-sm shadow-[#000000]/10 rounded-full flex justify-center items-center">
         <img src={icon} className="w-6 h-6" alt="feature-icon" />
       </div>
-      <div className={`flex flex-col gap-2 ${vertical ? "" : " py-2.5 flex-grow"}`}>
+      <div
+        className={`flex flex-col gap-2 ${vertical ? "" : " py-2.5 flex-grow"}`}
+      >
         <h4 className="text-neutral-900 text-xl font-semibold w-full">
           {featureHeader}
         </h4>

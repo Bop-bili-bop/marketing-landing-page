@@ -1,7 +1,7 @@
 import Links from "../utils/links";
 
-interface LinksNavProps{
-  className:string;
+interface LinksNavProps {
+  className: string;
 }
 
 const LinksNav = ({ className }: LinksNavProps) => {

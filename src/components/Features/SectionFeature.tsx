@@ -1,5 +1,14 @@
 import type { ReactNode } from "react";
 
+interface SectionFeatureProps {
+  children?: ReactNode;
+  tagLabel: string;
+  sectionHeader: string;
+  sectionDescription: string;
+  vertical: boolean;
+  img?: string;
+}
+
 const SectionFeature = ({
   children,
   tagLabel,
@@ -7,14 +16,7 @@ const SectionFeature = ({
   sectionDescription,
   vertical,
   img,
-}: {
-  children?: ReactNode;
-  tagLabel: string;
-  sectionHeader: string;
-  sectionDescription: string;
-  vertical: boolean;
-  img?: string;
-}) => {
+}: SectionFeatureProps) => {
   return (
     <div className="flex flex-col justify-center items-center text-center gap-16 py-24">
       <div className="flex flex-col gap-5 ">
