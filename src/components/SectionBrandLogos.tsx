@@ -9,7 +9,7 @@ const SectionBrandLogos = () => {
         </p>
       </div>
       <div className="-mx-3 xl:-mx-24">
-        <Carousel className="w-full" autoFill={true} />
+        <Carousel autoFill={true} />
       </div>
     </>
   );

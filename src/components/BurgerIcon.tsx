@@ -1,7 +1,4 @@
-interface BurgerIconProps{
-  className: string;
-  onClick: () => void;
-}
+import type { BurgerIconProps } from "../types/componentProps";
 
 
 const BurgerIcon = ({className, onClick} : BurgerIconProps) => {
