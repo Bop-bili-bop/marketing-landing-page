@@ -14,11 +14,11 @@ const Feature = ({
   return (
     <div
       className={`flex  gap-5 ${
-        vertical ? "justify-center items-center flex-col" : "flex-row text-left"
+        vertical ? "justify-center items-center flex-col" : "flex-row text-left items-start"
       }`}
     >
-      <div className="w-12 h-12 bg-white shadow-sm shadow-[#000000]/10 rounded-full flex justify-center items-center">
-        <img src={icon} className="w-6 h-6" alt="feature-icon" />
+      <div className="w-12 h-12 shrink-0 bg-white shadow-sm shadow-[#000000]/10 rounded-full flex justify-center items-center">
+        <img src={icon} className="w-6 h-6 mix-blend-multiply" alt="feature-icon" />
       </div>
       <div
         className={`flex flex-col gap-2 ${vertical ? "" : " py-2.5 flex-grow"}`}

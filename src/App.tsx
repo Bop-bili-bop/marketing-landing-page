@@ -15,7 +15,6 @@ function App() {
         <SectionHero />
         <SectionBrandLogos />
         <SectionFeature
-          vertical={true}
           tagLabel="Premium abstract images"
           sectionHeader="Easy access to top quality images"
           sectionDescription="In a world where storytelling constantly evolves, we lead with groundbreaking images designed for your presentation excellence."
@@ -63,30 +62,26 @@ function App() {
           tagLabel="High quality images"
           sectionHeader="For designers, by designers"
           sectionDescription="Unleash boundless creativity with a large repository of images optimized for designers"
-          vertical={false}
           img={featurePic}
         >
-          <div>
-            <Feature
-              vertical={false}
-              icon={FEATURE_ICONS.hdIcon}
-              featureHeader="5K resolution support"
-              featureDescription="All images boast a minimum resolution of 5K, ensuring crisp, crystal-clear quality."
-            />
-            <Feature
-              vertical={false}
-              icon={FEATURE_ICONS.waterPercentIcon}
-              featureHeader="From water to glass"
-              featureDescription="We offer a wide array of abstractions, ranging from water to glass, and encompassing various styles including 3D and vector."
-            />
-            <Feature
-              vertical={false}
-              icon={FEATURE_ICONS.rainbowIcon}
-              featureHeader="Portrait or landscape"
-              featureDescription="Effortlessly adapt your images for any platform - whether it's a stunning wallpaper or captivating Instagram reels and stories."
-            />
-          </div>
-          
+          <Feature
+            vertical={false}
+            icon={FEATURE_ICONS.hdIcon}
+            featureHeader="5K resolution support"
+            featureDescription="All images boast a minimum resolution of 5K, ensuring crisp, crystal-clear quality."
+          />
+          <Feature
+            vertical={false}
+            icon={FEATURE_ICONS.waterPercentIcon}
+            featureHeader="From water to glass"
+            featureDescription="We offer a wide array of abstractions, ranging from water to glass, and encompassing various styles including 3D and vector."
+          />
+          <Feature
+            vertical={false}
+            icon={FEATURE_ICONS.rainbowIcon}
+            featureHeader="Portrait or landscape"
+            featureDescription="Effortlessly adapt your images for any platform - whether it's a stunning wallpaper or captivating Instagram reels and stories."
+          />
         </SectionFeature>
       </Main>
     </div>

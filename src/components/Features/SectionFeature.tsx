@@ -5,8 +5,8 @@ interface SectionFeatureProps {
   tagLabel: string;
   sectionHeader: string;
   sectionDescription: string;
-  vertical: boolean;
   img?: string;
+  reverseRowDirection?: boolean
 }
 
 const SectionFeature = ({
@@ -14,8 +14,8 @@ const SectionFeature = ({
   tagLabel,
   sectionHeader,
   sectionDescription,
-  vertical,
   img,
+  reverseRowDirection
 }: SectionFeatureProps) => {
   return (
     <div className="flex flex-col justify-center items-center text-center gap-16 py-24">
@@ -29,17 +29,21 @@ const SectionFeature = ({
         <p className="text-neutral-600 text-xl">{sectionDescription}</p>
       </div>
       <section
-        className={`grid  ${
-          vertical
+        className={`grid w-full items-center ${
+          !img
             ? "grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 2xl:gap-16"
-            : "grid-cols-1 lg:grid-cols-2 gap-10  "
-        }  w-full`}
+            : "grid-cols-1 lg:grid-cols-2 gap-10"
+        }`}
       >
-        {children}
+        {!img ? (
+          <>{children}</>
+        ) : (
+          <div className="flex flex-col gap-10 2xl:gap-20">{children}</div>
+        )}
         {img && (
           <img
             src={img}
-            className="rounded-xl shadow-[#000]/10 shadow-xl w-full  h-full"
+            className={`${reverseRowDirection && "order-first"} rounded-xl shadow-[#000]/10 shadow-xl w-full object-cover h-full `}
             alt="image"
           />
         )}
