@@ -1,5 +1,14 @@
 import classNames from "classnames";
-import type { SectionFeatureProps } from "../../types/componentProps";
+import type { ReactNode } from "react";
+
+interface SectionFeatureProps {
+    children?: ReactNode;
+    tagLabel: string;
+    sectionHeader: string;
+    sectionDescription: string;
+    img?: string;
+    reverseRowDirection?: boolean
+  }
 
 const SectionFeature = ({
   children,
@@ -23,10 +32,10 @@ const SectionFeature = ({
 
       <section
         className={classNames(
-          "grid w-full items-center",
+          "grid w-full items-stretch",
           img
             ? "grid-cols-1 lg:grid-cols-2 gap-10"
-            : "grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 2xl:gap-16"
+            : "grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 2xl:gap-16"
         )}
       >
         {!img ? (

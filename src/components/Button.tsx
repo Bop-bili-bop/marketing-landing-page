@@ -1,10 +1,16 @@
 import classNames from "classnames";
-import type { ButtonProps } from "../types/componentProps";
 
 const styles = {
   primary: "bg-indigo-700 hover:bg-indigo-800  text-white ",
   secondary: "bg-white text-neutral-900 border-neutral-200 hover:bg-neutral-50",
+  toggle: "bg-white text-neutral-600 hover:bg-neutral-200/20 shadow-none"
 };
+interface ButtonProps {
+  variant: "primary" | "secondary" | "toggle";
+  disabled?: boolean;
+  onClick?: () => void;
+  children: React.ReactNode;
+}
 
 const Button = ({ variant, disabled, onClick, children }: ButtonProps) => {
   return (

@@ -1,5 +1,11 @@
 import classNames from "classnames";
-import type { FeatureProps } from "../../types/componentProps";
+
+interface FeatureProps {
+  vertical: boolean;
+  featureHeader: string;
+  featureDescription: string;
+  icon: string;
+}
 
 const Feature = ({
   vertical = true,
@@ -10,7 +16,7 @@ const Feature = ({
   return (
     <div
       className={classNames(
-        "flex gap-5",
+        "flex gap-5 h-full justify-center text-center",
         vertical
           ? "justify-center items-center flex-col"
           : "flex-row text-left items-start",
