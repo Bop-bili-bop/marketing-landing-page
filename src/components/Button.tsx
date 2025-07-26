@@ -10,9 +10,10 @@ interface ButtonProps {
   disabled?: boolean;
   onClick?: () => void;
   children: React.ReactNode;
+  className?: string;
 }
 
-const Button = ({ variant, disabled, onClick, children }: ButtonProps) => {
+const Button = ({ variant, disabled, onClick, children, className }: ButtonProps) => {
   return (
     <button
       disabled={disabled}
@@ -20,6 +21,7 @@ const Button = ({ variant, disabled, onClick, children }: ButtonProps) => {
       className={classNames(
         "flex justify-center font-medium text-base px-[26px] py-3 shadow-md ring-0 focus:ring-4 focus:ring-[#444ce7]/12 outline-none rounded-md gap-1.5 cursor-pointer disabled:bg-gray-100 disabled:text-gray-400 disabled:shadow-none disabled:cursor-not-allowed",
         styles[variant],
+        className
       )}
     >
       {children}

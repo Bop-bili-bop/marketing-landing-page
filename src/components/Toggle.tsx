@@ -1,29 +1,35 @@
-import { useState } from "react";
 import Button from "./Button";
 import classNames from "classnames";
 
-const Toggle = () => {
-  const [selected, setSelected] = useState<"monthly" | "annual">("monthly");
+interface ToggleProps {
+  selected: "monthly" | "annually";
+  setSelected: (value: "monthly" | "annually") => void;
+}
 
+const Toggle = ({ selected, setSelected }: ToggleProps) => {
   return (
     <>
       <div></div>
       <div className="flex justify-center gap-4">
         <Button
           onClick={() => setSelected("monthly")}
-          variant={classNames({
-            secondary: selected === "monthly",
-            toggle: selected !== "monthly",
-          }) as "secondary" | "toggle"}
+          variant={
+            classNames({
+              secondary: selected === "monthly",
+              toggle: selected !== "monthly",
+            }) as "secondary" | "toggle"
+          }
         >
           Monthly
         </Button>
         <Button
-          onClick={() => setSelected("annual")}
-          variant={classNames({
-            secondary: selected === "annual",
-            toggle: selected !== "annual",
-          }) as "secondary" | "toggle"}
+          onClick={() => setSelected("annually")}
+          variant={
+            classNames({
+              secondary: selected === "annually",
+              toggle: selected !== "annually",
+            }) as "secondary" | "toggle"
+          }
         >
           Annual
         </Button>

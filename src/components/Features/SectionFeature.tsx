@@ -7,7 +7,8 @@ interface SectionFeatureProps {
     sectionHeader: string;
     sectionDescription: string;
     img?: string;
-    reverseRowDirection?: boolean
+    reverseRowDirection?: boolean;
+    pricing?: boolean,
   }
 
 const SectionFeature = ({
@@ -17,6 +18,7 @@ const SectionFeature = ({
   sectionDescription,
   img,
   reverseRowDirection,
+  pricing
 }: SectionFeatureProps) => {
   return (
     <div className="flex flex-col justify-center items-center text-center gap-16 py-24">
@@ -33,9 +35,11 @@ const SectionFeature = ({
       <section
         className={classNames(
           "grid w-full items-stretch",
-          img
-            ? "grid-cols-1 lg:grid-cols-2 gap-10"
-            : "grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 2xl:gap-16"
+          { 
+            "grid-cols-1 lg:grid-cols-3 gap-10 2xl:gap-16" : pricing,
+            "grid-cols-1 lg:grid-cols-2 gap-10" : img, 
+            "grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 2xl:gap-16" : (!img && !pricing) 
+            }
         )}
       >
         {!img ? (

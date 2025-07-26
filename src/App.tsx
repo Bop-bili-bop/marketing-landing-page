@@ -8,6 +8,7 @@ import reversedFeaturePic from "./assets/unsplash_dsaasd.svg";
 import MappedFeature from "./components/Features/MappedFeature";
 import Toggle from "./components/Toggle";
 import PriceCard from "./components/PriceCard";
+import PricingSection from "./components/PricingSection";
 
 function App() {
   return (
@@ -44,11 +45,9 @@ function App() {
           tagLabel="Pricing Tiers"
           sectionHeader="Fit for all your needs"
           sectionDescription="Pick the plan that suits you today and step up as your demands grow - our flexible options have your journey mapped out."
+          pricing={true}
         >
-          <Toggle/>
-          <PriceCard/>
-          <PriceCard/>
-          <PriceCard/>
+          <PricingSection/>
         </SectionFeature>
       </Main>
     </div>

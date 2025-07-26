@@ -5,7 +5,7 @@ const SectionHero = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col xl:flex-row gap-12  xl:gap-8 items-center "
+      className="flex flex-col xl:flex-row gap-12 xl:pb-24 md:pb-16 pb-12 xl:gap-8 items-center "
     >
       <div className="flex flex-col gap-8 lg:gap-16 w-full max-w-1xl">
         <div className="flex flex-col gap-4 lg:gap-6">
