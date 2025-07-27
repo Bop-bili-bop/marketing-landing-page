@@ -25,7 +25,7 @@ const PriceCard = ({ paymentPlan, data }: PriceCardProps) => {
     >
       <div className="flex flex-col gap-8 flex-grow">
         {data.popular && (
-          <h5 className=" text-center bg-indigo-50 text-xl py-4 font-bold text-indigo-700">
+          <h5 className="-mx-8 -mt-8 rounded-lg text-center bg-indigo-50 text-xl py-4 font-bold text-indigo-700">
             Most popular
           </h5>
         )}
@@ -35,15 +35,25 @@ const PriceCard = ({ paymentPlan, data }: PriceCardProps) => {
         </div>
         <div className="flex flex-col gap-2">
           <div className="flex flex-row items-end gap-0.5 ">
-            <h4 className="text-5xl font-semibold">
+            <h4
+              className={classNames("text-5xl font-semibold", {
+                "text-indigo-700": data.popular,
+              })}
+            >
               ${" "}
               {paymentPlan === "monthly"
                 ? data.priceMonthly
                 : data.priceAnnualy}
             </h4>
-            <p className="text-base">/ {paymentPlan}</p>
+            <p
+              className={classNames("text-base", {
+                "text-indigo-700": data.popular,
+              })}
+            >
+              / {paymentPlan}
+            </p>
           </div>
-          <p className="text-base text-neutral-600 ">Billed {paymentPlan}</p>
+          <p className="text-base text-neutral-600">Billed {paymentPlan}</p>
         </div>
         <div className="flex flex-col gap-5 h-full pb-10">
           {data.planFacts.map((fact, i) => (
