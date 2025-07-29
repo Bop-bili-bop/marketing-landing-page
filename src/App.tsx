@@ -12,6 +12,9 @@ import Accordion from "./components/Accordion";
 import { FAQData } from "./utils/FAQData";
 import CustomerSupport from "./components/CustomerSupport";
 import SectionNewsletter from "./components/SectionNewsLetter";
+import SectionContact from "./components/SectionContact";
+import InputField from "./components/InputField";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   return (
@@ -60,9 +63,12 @@ function App() {
               answer={data.answer}
             />
           ))}
-          <CustomerSupport/>
+          <CustomerSupport />
         </FAQSection>
-        <SectionNewsletter/>
+        <SectionNewsletter />
+        <SectionContact>
+          <ContactForm/>
+        </SectionContact>
       </Main>
     </div>
   );

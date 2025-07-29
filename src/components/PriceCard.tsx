@@ -65,6 +65,7 @@ const PriceCard = ({ paymentPlan, data }: PriceCardProps) => {
         </div>
       </div>
       <Button
+      size="xl"
         className="mt-8 border border-neutral-200"
         variant={data.popular ? "primary" : "secondary"}
       >
