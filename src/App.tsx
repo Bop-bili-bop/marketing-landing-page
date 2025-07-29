@@ -6,9 +6,12 @@ import SectionHero from "./components/SectionHero";
 import featurePic from "./assets/unsplash_rAtzDB6hWrU.svg";
 import reversedFeaturePic from "./assets/unsplash_dsaasd.svg";
 import MappedFeature from "./components/Features/MappedFeature";
-import Toggle from "./components/Toggle";
-import PriceCard from "./components/PriceCard";
 import PricingSection from "./components/PricingSection";
+import FAQSection from "./components/FAQSection";
+import Accordion from "./components/Accordion";
+import { FAQData } from "./utils/FAQData";
+import CustomerSupport from "./components/CustomerSupport";
+import SectionNewsletter from "./components/SectionNewsLetter";
 
 function App() {
   return (
@@ -47,8 +50,19 @@ function App() {
           sectionDescription="Pick the plan that suits you today and step up as your demands grow - our flexible options have your journey mapped out."
           pricing={true}
         >
-          <PricingSection/>
+          <PricingSection />
         </SectionFeature>
+        <FAQSection>
+          {FAQData.map((data, key) => (
+            <Accordion
+              key={key}
+              question={data.qusetion}
+              answer={data.answer}
+            />
+          ))}
+          <CustomerSupport/>
+        </FAQSection>
+        <SectionNewsletter/>
       </Main>
     </div>
   );

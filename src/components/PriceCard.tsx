@@ -18,14 +18,14 @@ const PriceCard = ({ paymentPlan, data }: PriceCardProps) => {
   return (
     <div
       className={classNames(
-        "flex flex-col justify-center rounded-lg h-full justify-items-stretch w-full p-8 gap-8 text-left border ",
+        "flex flex-col justify-center rounded-lg h-full w-full p-8 gap-8 text-left border max-w-lg 2xl:h-[768px]",
         { "border-indigo-600 shadow-2xl": data.popular },
         { "border-neutral-200 shadow-sm": !data.popular },
       )}
     >
       <div className="flex flex-col gap-8 flex-grow">
         {data.popular && (
-          <h5 className="-mx-8 -mt-8 rounded-lg text-center bg-indigo-50 text-xl py-4 font-bold text-indigo-700">
+          <h5 className="-mx-8 -mt-8 rounded-t-lg text-center bg-indigo-50 text-xl py-4 font-bold text-indigo-700">
             Most popular
           </h5>
         )}

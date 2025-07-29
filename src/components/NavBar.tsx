@@ -13,6 +13,7 @@ const NavBar = () => {
       <img src={Logo} className="w-28 h-8"></img>
       <BurgerIcon 
       onClick={toggleBurgerMenu}
+      isOpen={isOpen}
       className="lg:hidden text-neutral-600 hover:text-neutral-900 cursor-pointer 
       ring-0 outline-none rounded-sm focus:ring-4 focus:ring-[#444ce7]/12"
        />

@@ -10,11 +10,11 @@ const BurgerMenu = ({ isOpen }: BurgerMenuProps) => {
   return (
     <div
       className={classNames(
-        "lg:hidden bg-white fixed w-60 h-full inset-0 left-0 top-0 transform transition-transform duration-300 ease-in-out",
+        "lg:hidden bg-white fixed w-60 h-full inset-0 right-0 top-0 z-20 transform transition-transform duration-300 ease-in-out",
         { "translate-x-0": isOpen, "-translate-x-full": !isOpen },
       )}
     >
-      <img src={Logo} className="m-2" />
+      <img src={Logo} className="m-2" /> 
       <LinksNav className="flex-col border-t-2 border-neutral-300 pt-3 gap-2 m-3" />
     </div>
   );

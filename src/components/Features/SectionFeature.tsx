@@ -34,7 +34,7 @@ const SectionFeature = ({
 
       <section
         className={classNames(
-          "grid w-full items-stretch",
+          "grid w-full justify-items-center",
           { 
             "grid-cols-1 lg:grid-cols-3 gap-10 2xl:gap-16" : pricing,
             "grid-cols-1 lg:grid-cols-2 gap-10" : img, 
