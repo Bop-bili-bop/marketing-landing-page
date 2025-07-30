@@ -15,7 +15,7 @@ const CustomerSupport = () => {
             team.
           </p>
       </div>
-      <Button size="md" className="w-full md:w-1/4" variant="primary">Get in touch</Button>
+      <Button type="button" size="md" className="w-full md:w-1/4" variant="primary">Get in touch</Button>
     </div>
   );
 };

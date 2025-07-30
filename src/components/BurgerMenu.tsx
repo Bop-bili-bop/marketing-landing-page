@@ -15,7 +15,7 @@ const BurgerMenu = ({ isOpen }: BurgerMenuProps) => {
       )}
     >
       <img src={Logo} className="m-2" /> 
-      <LinksNav className="flex-col border-t-2 border-neutral-300 pt-3 gap-2 m-3" />
+      <LinksNav size="lg" className="flex-col border-t-2 border-neutral-300 pt-3 gap-2 m-3" />
     </div>
   );
 };

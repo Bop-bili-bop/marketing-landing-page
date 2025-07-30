@@ -1,21 +1,32 @@
+import classNames from "classnames";
 import Links from "../utils/links";
 
 interface LinksNavProps {
-  className: string;
+  className?: string;
+  size: string;
 }
 
-const LinksNav = ({ className }: LinksNavProps) => {
+const LinksNav = ({ className, size }: LinksNavProps) => {
   return (
     <ul id="links" className={`flex font-medium text-neutral-700 ${className}`}>
-      {Links.map((link) => (
+      {Links.map((link, key) => (
         <li>
-          <a
-            href="#"
-            className="px-0.5 text-neutral-600 hover:text-neutral-900 cursor-pointer 
-                ring-0 outline-none rounded-sm focus:ring-4 focus:ring-[#444ce7]/12"
-          >
-            {link}
-          </a>
+          <ul>
+            <a
+              key={key}
+              href="#"
+              className={classNames(
+                "px-0.5 text-neutral-600 outline-none rounded-sm cursor-pointer",
+                "ring-0 hover:text-neutral-900 focus:ring-4 focus:ring-[#444ce7]/12",
+                {
+                  "text-base": size === "lg",
+                  "text-sm": size === "md",
+                },
+              )}
+            >
+              {link}
+            </a>
+          </ul>
         </li>
       ))}
     </ul>

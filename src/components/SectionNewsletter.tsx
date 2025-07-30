@@ -31,7 +31,7 @@ const SectionNewsletter = () => {
                 placeholder="Enter your email"
                 id="email"
               />
-              <Button size="md" variant="primary">
+              <Button type="button" size="md" variant="primary">
                 Subscribe
               </Button>
             </div>

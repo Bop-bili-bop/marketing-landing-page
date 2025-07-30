@@ -18,8 +18,8 @@ const SectionHero = () => {
           </div>
         </div>
         <div className="flex flex-row gap-4 lg:gap-8">
-          <Button size="2xl" variant="secondary">Learn more</Button>
-          <Button size="2xl" variant="primary">See pricing</Button>
+          <Button type="button" size="2xl" variant="secondary">Learn more</Button>
+          <Button type="button" size="2xl" variant="primary">See pricing</Button>
         </div>
       </div>
       <img

@@ -11,7 +11,8 @@ interface ButtonProps {
   onClick?: () => void;
   children: React.ReactNode;
   className?: string;
-  size:  "md" | "lg" | "xl" | "2xl";
+  size: "md" | "lg" | "xl" | "2xl";
+  type: "button" | "submit";
 }
 
 const Button = ({
@@ -21,13 +22,18 @@ const Button = ({
   children,
   className,
   size,
+  type = "button",
 }: ButtonProps) => {
   return (
     <button
+      type={type}
       disabled={disabled}
       onClick={onClick}
       className={classNames(
-        "text-center font-medium text-base shadow-md ring-0 focus:ring-4 focus:ring-[#444ce7]/12 outline-none rounded-md gap-1.5 cursor-pointer disabled:bg-gray-100 disabled:text-gray-400 disabled:shadow-none disabled:cursor-not-allowed",
+        "text-center font-medium text-base shadow-md ring-0 focus:ring-4 focus:ring-[#444ce7]/12 outline-none rounded-md gap-1.5 cursor-pointer",
+        {
+          "bg-gray-100 text-gray-400 shadow-none cursor-not-allowed": disabled,
+        },
         styles[variant],
         className,
         {

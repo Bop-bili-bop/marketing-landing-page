@@ -20,11 +20,11 @@ const NavBar = () => {
       <BurgerMenu isOpen={isOpen}/>
       
       <div className="hidden lg:block">
-        <LinksNav className="flex-row gap-8"/>
+        <LinksNav size="lg" className="flex-row gap-8"/>
       </div>
       <div className="hidden lg:flex flex-row gap-4">
-        <Button size="lg" variant="secondary">Learn More</Button>
-        <Button size="lg" variant="primary">See pricing</Button>
+        <Button type="button" size="lg" variant="secondary">Learn More</Button>
+        <Button type="button" size="lg" variant="primary">See pricing</Button>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ const Toggle = ({ selected, setSelected }: ToggleProps) => {
     <>
       <div></div>
       <div className="flex justify-center gap-4">
-        <Button
+        <Button type="button"
           size="lg"
           onClick={() => setSelected("monthly")}
           variant={
@@ -24,6 +24,7 @@ const Toggle = ({ selected, setSelected }: ToggleProps) => {
           Monthly
         </Button>
         <Button
+        type="button"
           size="lg"
           onClick={() => setSelected("annually")}
           variant={

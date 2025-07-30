@@ -11,10 +11,9 @@ import FAQSection from "./components/FAQSection";
 import Accordion from "./components/Accordion";
 import { FAQData } from "./utils/FAQData";
 import CustomerSupport from "./components/CustomerSupport";
-import SectionNewsletter from "./components/SectionNewsLetter";
 import SectionContact from "./components/SectionContact";
-import InputField from "./components/InputField";
 import ContactForm from "./components/ContactForm";
+import SectionNewsletter from "./components/SectionNewsletter";
 
 function App() {
   return (
