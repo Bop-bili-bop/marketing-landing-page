@@ -25,7 +25,7 @@ const SectionNewsletter = () => {
                 </div>
               ))}
             </div>
-            <div className="flex flex-row w-md gap-4 ">
+            <div className="flex flex-col sm:flex-row w-full max-w-md gap-4 ">
               <InputField
                 type="email"
                 placeholder="Enter your email"

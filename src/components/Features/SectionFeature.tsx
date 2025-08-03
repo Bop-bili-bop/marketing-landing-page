@@ -9,6 +9,7 @@ interface SectionFeatureProps {
     img?: string;
     reverseRowDirection?: boolean;
     pricing?: boolean,
+    id?: string
   }
 
 const SectionFeature = ({
@@ -18,10 +19,11 @@ const SectionFeature = ({
   sectionDescription,
   img,
   reverseRowDirection,
-  pricing
+  pricing,
+  id
 }: SectionFeatureProps) => {
   return (
-    <div className="flex flex-col justify-center items-center text-center gap-16 py-24">
+    <div id={id} className="flex flex-col justify-center items-center text-center gap-16 py-24">
       <div className="flex flex-col gap-5">
         <div className="flex-col gap-3">
           <h2 className="text-indigo-700 font-semibold">{tagLabel}</h2>

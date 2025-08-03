@@ -14,6 +14,7 @@ import CustomerSupport from "./components/CustomerSupport";
 import SectionContact from "./components/SectionContact";
 import ContactForm from "./components/ContactForm";
 import SectionNewsletter from "./components/SectionNewsletter";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <SectionHero />
         <SectionBrandLogos />
         <SectionFeature
+          id="features"
           tagLabel="Premium abstract images"
           sectionHeader="Easy access to top quality images"
           sectionDescription="In a world where storytelling constantly evolves, we lead with groundbreaking images designed for your presentation excellence."
@@ -51,6 +53,7 @@ function App() {
           sectionHeader="Fit for all your needs"
           sectionDescription="Pick the plan that suits you today and step up as your demands grow - our flexible options have your journey mapped out."
           pricing={true}
+          id="pricing"
         >
           <PricingSection />
         </SectionFeature>
@@ -68,6 +71,7 @@ function App() {
         <SectionContact>
           <ContactForm/>
         </SectionContact>
+        <Footer/>
       </Main>
     </div>
   );

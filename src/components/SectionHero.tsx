@@ -4,7 +4,7 @@ import Button from "./Button";
 const SectionHero = () => {
   return (
     <section
-      id="hero"
+      id="home"
       className="flex flex-col xl:flex-row gap-12 xl:pb-24 md:pb-16 pb-12 xl:gap-8 items-center "
     >
       <div className="flex flex-col gap-8 lg:gap-16 w-full max-w-1xl">

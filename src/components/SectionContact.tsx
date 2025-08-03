@@ -20,7 +20,7 @@ const SectionContact = ({ children }: SectionContactProps) => {
     },
   ];
   return (
-    <div className="flex flex-col py-24">
+    <div id="contact" className="flex flex-col py-24">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-16 p-8">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-5">
